@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+    <h1>ramens_db</h1>
+    <a href="/create" role="button">ラーメン登録画面</a>
+        {% for ramen in ramens_db %}
+        <article>
+            <h2>{{ ramen.title }}</h2>
+            <a href="/update/{{ ramen.id }}" role="button">編集</a>
+            <a href="/delete/{{ ramen.id }}" role="button">削除</a>
+            <!-- <p>作成日時：{{ ramen.created_at }}</p> -->
+            <p>index:{{ramen.id}} win:{{ramen.win-1}} lose:{{ramen.lose-1}} rate:{{ramen.win/(ramen.win+ramen.lose)}}</p>
+            <img src="/static/images/{{ramen.title}}.jpg" width="300" height=auto>
+        </article>
+    {% endfor %}
+{% endblock %}

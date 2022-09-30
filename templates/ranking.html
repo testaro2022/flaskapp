@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>ranking</h1>
+    {% for ramen in ranking %}
+        <p>{{ramen.title}}<p>
+    {% endfor %}
+{% endblock %}

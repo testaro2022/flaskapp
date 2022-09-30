@@ -1,0 +1,14 @@
+use ebdb;
+CREATE TABLE posts(
+	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    win INT NOT NULL,
+    lose INT NOT NULL,
+    title VARCHAR(50),
+    created_at DATETIME
+);
+
+INSERT INTO posts(win,lose,title)
+  VALUES
+  (1,1,"test_workbench1"),
+  (1,1,"test_workbench2"),
+  (1,1,"test_workbench3");
